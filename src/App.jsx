@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from './components/pages/Home'
+import { BrowserRouter } from 'react-router-dom'
 import Login from './components/pages/Login'
-import Layout from './components/shared/layout'
 
 function App() {
 
   return (
-    <>
+    <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -34,7 +34,7 @@ function App() {
         <Route path="/settings/virtualcard" element={<VirtualCard />} />
         <Route path="/settings/pricingplan" element={<PricingPlan />} /> */}
       </Routes>
-    </>
+    </BrowserRouter>
   )
 }
 
